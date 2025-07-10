@@ -24,7 +24,7 @@ Este projeto foi construído do zero utilizando C# e WPF no .NET 8, com foco em 
 * **Interface Moderna e Customizável:**
     * Janela sem bordas com um design "vidro fume" semitransparente.
     * Animações sutis e profissionais em todos os botões e elementos interativos.
-    * Controles de janela avançados, como maximização para a área de trabalho e redimensionamento via atalhos.
+    * Controles de janela avançados, como maximização para a área de trabalho e redimensionamento via atalhos (`Ctrl+Shift+Seta` ou `Ctrl+Shift+Menos/Mais`).
 * **Feedback Sonoro Dinâmico:**
     * Efeitos sonoros para cliques e hovers, proporcionando uma experiência tátil.
     * Um "soundscape" ambiente na tela de boas-vindas, com a opção de ser silenciado (`Ctrl+Shift+M`).
