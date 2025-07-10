@@ -7,7 +7,7 @@
 
 Um hub de produtividade para centralizar seus aplicativos web e fluxos de trabalho em um único lugar, com estilo e personalização.
 
-![Demo do JyanWrappers Hub](https://github.com/user-attachments/assets/9f168bb4-0c3d-4d1d-a5d4-d8813cf8e5a7
+![Demo do JyanWrappers Hub](https://github.com/user-attachments/assets/d496472e-7ba0-4cd7-aa49-3396d57ac10e
 )  
 
 ## 🚀 Sobre o Projeto
@@ -72,6 +72,6 @@ Este é um projeto de portfólio pessoal, mas sugestões e discussões são semp
 
 * **JyanDev**
     * GitHub: [@JyanDev](https://github.com/JyanDev)
-    * LinkedIn: [Seu Perfil no LinkedIn](https://www.linkedin.com/in/jyan-silva) 
+    * LinkedIn: [Jyan Silva](https://www.linkedin.com/in/jyan-silva) 
     ---
 
