@@ -15,6 +15,16 @@ O **Hub-Wrappers** nasceu da necessidade de organizar o fluxo de trabalho digita
 
 Nesta nova versão, o projeto evoluiu para uma **arquitetura cliente-servidor completa**. Além de todas as funcionalidades locais, o Hub-Wrappers agora se conecta a uma **API RESTful construída com C# e ASP.NET Core**, preparando o terreno para que os dados e perfis dos usuários sejam salvos na nuvem e acessíveis de qualquer lugar.
 
+
+## 🏁 Começando
+
+Para usar o JyanWrappers Hub:
+
+1.  Vá para a seção de [**Installer**](https://github.com/JyanDev/Hub-Wrappers/tree/main/Installer) deste repositório.
+    2.  Baixe o arquivo de instalação `Hub_Wrappers_v1.1.exe`.
+3.  Execute o instalador. Ele pode pedir permissão de administrador para instalar na pasta de Programas.
+4. Após iniciar o `Hub Wrapper` entre no modo anônimo, pois a API está inativa e em desenvolvimento.
+
 ## ✨ Funcionalidades Principais
 
 ### Cliente (Hub-Wrappers - WPF)
