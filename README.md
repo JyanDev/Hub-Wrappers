@@ -21,7 +21,7 @@ Nesta nova versão, o projeto evoluiu para uma **arquitetura cliente-servidor co
 Para usar o *Hub Wrappers*:
 
 1.  Vá para a seção de [**Installer**](https://github.com/JyanDev/Hub-Wrappers/tree/main/Installer) deste repositório.
-    2.  Baixe o arquivo de instalação `Hub_Wrappers_v1.1.exe`.
+2.  Baixe o arquivo de instalação `Hub_Wrappers_v1.1.exe`.
 3.  Execute o instalador. Ele pode pedir permissão de administrador para instalar na pasta de Programas.
 4. Após iniciar o `Hub Wrapper` entre no modo anônimo, pois a API está inativa e em desenvolvimento.
 
