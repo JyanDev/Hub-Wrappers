@@ -7,11 +7,11 @@
 
 > 🚧 **Nota:** Este projeto está passando por uma reescrita arquitetural completa. A versão legada (V1 em C#) está disponível abaixo, mas o desenvolvimento ativo está focado na V2 (Python).
 
-### Prévia (V2)
+### Prévia HubWrappers(V2)
 ![Demo do Hub-Wrappers V2](https://github.com/user-attachments/assets/5da5b360-d55d-4947-a08b-fca0b759a9ed)
 ---
 
-## 🔮  Visão da V2:
+## Visão do Hub V2:
 **Foco:** Performance, UX Fluida e Arquitetura Desacoplada.
 
 Decidi migrar de uma arquitetura monolítica Desktop (WPF) para uma solução híbrida moderna para resolver problemas de consumo de memória e escalabilidade de interface.
