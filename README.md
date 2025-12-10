@@ -5,11 +5,10 @@
 ![Next Gen](https://img.shields.io/badge/V2-Python_PyWebView_Vue-green)
 
 
-### 🖼️ Galeria (V2)
-![Demo do Hub-Wrappers V2](https://github.com/user-attachments/assets/5da5b360-d55d-4947-a08b-fca0b759a9ed)
-
 > 🚧 **Nota:** Este projeto está passando por uma reescrita arquitetural completa. A versão legada (V1 em C#) está disponível abaixo, mas o desenvolvimento ativo está focado na V2 (Python).
 
+### Prévia (V2)
+![Demo do Hub-Wrappers V2](https://github.com/user-attachments/assets/5da5b360-d55d-4947-a08b-fca0b759a9ed)
 ---
 
 ## 🔮  Visão da V2:
