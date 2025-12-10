@@ -1,0 +1,17 @@
+# Ambientes Virtuais
+venv/
+env/
+.env
+
+# Bytecode do Python (arquivos temporários)
+__pycache__/
+*.pyc
+
+# Logs e Dados Locais
+*.log
+src/data/*.json
+src/frontend/assets/temp/
+
+# IDE
+.vscode/
+.idea/
