@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HubWrappers v2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="title-bar">
+        <div class="pywebview-drag-region">
+            <span style="margin-left: 15px; font-weight: 600; font-size: 13px;">HubWrappers v2.0</span>
+        </div>
+
+        <div class="window-controls">
+            <button class="control-btn" onclick="window.pywebview.api.minimizar()">&#xE921;</button>
+
+            <button class="control-btn" onclick="window.pywebview.api.maximizar()">&#xE922;</button>
+
+            <button class="control-btn btn-close" onclick="window.pywebview.api.fechar()">&#xE8BB;</button>
+        </div>
+    </div>
+
+   <div class="sidebar">
+
+        <div id="sidebar-toggle-btn" onclick="toggleSidebar()">&lt;&lt;</div>
+
+        <div class="sidebar-content">
+
+            <div class="sidebar-toolbar">
+                <button class="tool-btn" onclick="irParaHome()" title="Ir para o Início">
+                    🏠Home </button>
+                <button class="tool-btn btn-danger-icon" onclick="fecharTodosWrappers()" title="Fechar Todos Apps">
+                🛑 </button>
+            </div>
+
+            <div class="section-title">Meus Espaços</div>
+
+            <ul class="folder-list" id="folder-list-ui">
+                <li class="folder-item">
+                    <span>🔄</span> Carregando...
+                </li>
+            </ul>
+
+            <div class="folder-item" onclick="criarNovaPasta()" style="color: var(--accent); margin-top: 10px;">
+                <span>+</span> Nova Pasta
+            </div>
+
+            <div class="profile-section">
+                <div class="avatar">JD</div>
+                <div class="profile-info">
+                    <div style="font-weight: bold;">JyanDev</div>
+                    <div style="font-size: 11px; color: #4CAF50;">Online</div>
+                </div>
+                <button class="settings-btn" onclick="abrirConfiguracoes()" title="Configurações">⚙️</button>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="wrappers-container" id="wrapper-list-ui">
+            </div>
+
+        <div class="header-right">
+            <button class="control-mini-btn btn-danger" id="btn-kill-wrapper" onclick="fecharWrapperAtual()" title="Encerrar Wrapper">X</button>
+        </div>
+
+        <div id="btn-toggle-header" onclick="toggleHeader()">
+            &#9650;
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="empty-state">
+            <h1>Bem-vindo ao Hub v2.</h1>
+            <p>Selecione uma pasta ou wrapper para começar.</p>
+        </div>
+    </div>
+    <div id="custom-context-menu" class="context-menu">
+        <div class="menu-item" onclick="acaoEditar()">✏️ Editar</div>
+        <div class="menu-item" onclick="acaoExcluir()" style="color: #ff5555;">🗑️ Excluir</div>
+    </div>
+
+    <div id="resize-grip"></div>
+    <div id="modal-wrapper" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">Configurar Wrapper</div>
+
+            <div class="input-group">
+                <label class="input-label">Nome</label>
+                <input type="text" id="input-wrapper-name" class="modal-input" placeholder="Ex: GitHub">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">URL</label>
+                <input type="text" id="input-wrapper-url" class="modal-input" placeholder="https://...">
+                <div id="url-warning-msg" class="url-warning">
+                    ℹ️ Link profundo detectado. Pode causar erros de login.
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Pasta</label>
+                <select id="input-wrapper-folder" class="modal-input">
+                    </select>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="fecharModal('modal-wrapper')">Cancelar</button>
+                <button class="btn-confirm" onclick="salvarWrapperModal()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-confirm" class="modal-overlay">
+        <div class="modal-box" style="width: 300px;">
+            <div class="modal-header" style="color: #ff5555;">⚠️ Atenção</div>
+            <p id="confirm-msg" style="font-size: 13px; color: #ccc;">Tem certeza?</p>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="fecharModal('modal-confirm')">Não</button>
+                <button class="btn-confirm" style="background: #ff5555;" onclick="executarAcaoConfirmada()">Sim, Excluir</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-wrapper" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modal-wrapper-title">Novo Wrapper</span>
+                <button class="close-modal-btn" onclick="fecharModal('modal-wrapper')">×</button>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Nome do Wrapper</label>
+                <input type="text" id="inp-wrap-name" class="modal-input" placeholder="Ex: GitHub">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">URL do Site</label>
+                <div style="position: relative;">
+                    <input type="text" id="inp-wrap-url" class="modal-input" placeholder="https://..." oninput="validarUrlProfunda(this)">
+                    <div id="url-warning-icon" class="info-badge" title="Link Profundo Detectado" style="display: none;">i</div>
+                </div>
+                <div id="url-warning-msg" class="url-warning-text" style="display: none;">
+                    ⚠️ Este não é um link raiz. Isso pode causar erros de login.
+                    <br><a href="#" onclick="corrigirParaRaiz()">Clique para usar a raiz.</a>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Salvar na Pasta</label>
+                <select id="inp-wrap-folder" class="modal-input">
+                    </select>
+            </div>
+
+            <div class="input-group" style="display: flex; align-items: center; gap: 10px;">
+                <img id="inp-wrap-icon-preview" src="" style="width: 32px; height: 32px; background: #333; border-radius: 4px;">
+                <label class="input-label" style="margin: 0;">Ícone detectado</label>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="fecharModal('modal-wrapper')">Cancelar</button>
+                <button class="btn-confirm" onclick="salvarWrapperForm()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-folder" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">Configurar Pasta</div>
+            <div class="input-group">
+                <label class="input-label">Nome da Pasta</label>
+                <input type="text" id="inp-folder-name" class="modal-input">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="fecharModal('modal-folder')">Cancelar</button>
+                <button class="btn-confirm" onclick="salvarPastaForm()">Salvar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

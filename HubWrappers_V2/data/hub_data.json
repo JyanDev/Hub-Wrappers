@@ -1,0 +1,66 @@
+{
+    "folders": [
+        {
+            "id": "8e44369a-b7ae-4c84-bc14-fd1a9e452e64",
+            "name": "Dev",
+            "icon": "folder"
+        },
+        {
+            "id": "d7947439-ce75-43f2-bf5a-e74eb46f5321",
+            "name": "Estudos",
+            "icon": "folder"
+        },
+        {
+            "id": "80875422-be46-4d11-b2f3-c029c27efeff",
+            "name": "Dev2",
+            "icon": "folder"
+        },
+        {
+            "id": "4d5d5fe0-a57d-492f-b055-60155b9be3b1",
+            "name": "a",
+            "icon": "folder"
+        },
+        {
+            "id": "13836049-10f0-49a8-a560-385f7daed80c",
+            "name": "Luisa",
+            "icon": "folder"
+        }
+    ],
+    "wrappers": [
+        {
+            "id": "bddb9434-3e05-4623-a5b3-567eb1170003",
+            "name": "GitHub",
+            "url": "https://github.com",
+            "folder_id": "8e44369a-b7ae-4c84-bc14-fd1a9e452e64",
+            "icon": "default.png"
+        },
+        {
+            "id": "950f1355-a67e-4bb0-95eb-6e24947bde98",
+            "name": "Google Translate",
+            "url": "https://translate.google.com/?sl=es&tl=pt&op=translate",
+            "folder_id": "4d5d5fe0-a57d-492f-b055-60155b9be3b1",
+            "icon": "https://www.gstatic.com/translate/favicon.ico"
+        },
+        {
+            "id": "5dfdaa29-00a0-46a5-b4fc-57f523b0f881",
+            "name": "Google Translate",
+            "url": "https://translate.google.com/?sl=es&tl=pt&op=translate",
+            "folder_id": "8e44369a-b7ae-4c84-bc14-fd1a9e452e64",
+            "icon": "https://www.gstatic.com/translate/favicon.ico"
+        },
+        {
+            "id": "4b18ebb7-be52-4dcb-b654-244728728fda",
+            "name": "JyanDev (JyanDev) · GitHub",
+            "url": "https://github.com/JyanDev",
+            "folder_id": "8e44369a-b7ae-4c84-bc14-fd1a9e452e64",
+            "icon": "https://github.com/fluidicon.png"
+        },
+        {
+            "id": "2e552deb-3437-45e1-991b-f186d50517aa",
+            "name": "MTG ANOS 80 - Girls Just Want - DJ JUNIOR BALLA (REMIX BH) Cyndi Lauper - YouTube",
+            "url": "https://www.youtube.com/watch?v=hUZ8jJaKic8&list=RDJqH7Wpjc2xg&index=27",
+            "folder_id": "8e44369a-b7ae-4c84-bc14-fd1a9e452e64",
+            "icon": "https://www.youtube.com/s/desktop/1ff7e4cf/img/favicon.ico"
+        }
+    ]
+}
